@@ -36,36 +36,33 @@
             min-height: 100vh;
         }
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 80px;
             width: 80%;
             max-width: 1200px;
         }
-        .image-block {
+        .main-image, .gif-large, .gif-stack {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 40px;
+            align-items: flex-start;
         }
-        .image-block img {
+        .main-image img, .gif-large img, .gif-stack img {
             width: 100%;
             height: auto;
         }
         .caption {
             margin-top: 15px;
             padding: 10px;
-            text-align: center;
+            text-align: left;
             background: rgba(255, 255, 255, 0.8);
             width: 100%;
             box-sizing: border-box;
         }
         .gif-stack {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
             width: 100%;
         }
         .player-button {
@@ -94,6 +91,17 @@
             body {
                 padding: 40px;
             }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .gif-stack {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
             .caption {
                 padding: 8px;
             }
@@ -111,22 +119,24 @@
     <audio id="audio" src="sound.mp3"></audio>
 
     <div class="container">
-        <div class="image-block">
+        <div class="main-image">
             <img src="work.jpg" alt="Основная работа">
             <div class="caption">Основная работа</div>
         </div>
-        <div class="image-block">
-            <img src="at-work-1.gif" alt="Гиф 1">
-            <div class="caption">Рабочий момент 1</div>
-        </div>
-        <div class="gif-stack">
-            <div class="image-block">
-                <img src="at-work-2.gif" alt="Гиф 2">
-                <div class="caption">Рабочий момент 2</div>
+        <div>
+            <div class="gif-large">
+                <img src="at-work-1.gif" alt="Гиф 1">
+                <div class="caption">Рабочий момент 1</div>
             </div>
-            <div class="image-block">
-                <img src="at-work-3.gif" alt="Гиф 3">
-                <div class="caption">Рабочий момент 3</div>
+            <div class="gif-stack">
+                <div>
+                    <img src="at-work-2.gif" alt="Гиф 2">
+                    <div class="caption">Рабочий момент 2</div>
+                </div>
+                <div>
+                    <img src="at-work-3.gif" alt="Гиф 3">
+                    <div class="caption">Рабочий момент 3</div>
+                </div>
             </div>
         </div>
     </div>
