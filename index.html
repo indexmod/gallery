@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Indexmod Gallery" />
+    <meta property="og:description" content="Краткое описание Indexmod Gallery" />
+    <meta property="og:image" content="/favicon-96x96.png" />
+    <meta property="og:url" content="https://gallery.indexmod.xyz" />
+
+    <!-- Telegram Meta Tags -->
+    <meta name="telegram:channel" content="@your_channel" />
+    <meta name="theme-color" content="#ffffff" />
+
     <title>W 011</title>
     <style>
         body {
@@ -18,29 +36,36 @@
             min-height: 100vh;
         }
         .container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-gap: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 80%;
             max-width: 1200px;
         }
-        .main-image, .gif-large, .gif-stack {
+        .image-block {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 40px;
         }
-        .main-image img, .gif-large img, .gif-stack img {
+        .image-block img {
             width: 100%;
             height: auto;
         }
         .caption {
             margin-top: 15px;
-            text-align: left;
+            padding: 10px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            box-sizing: border-box;
         }
         .gif-stack {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
             width: 100%;
         }
         .player-button {
@@ -65,6 +90,19 @@
         audio {
             display: none;
         }
+        @media (max-width: 768px) {
+            body {
+                padding: 40px;
+            }
+            .caption {
+                padding: 8px;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -73,24 +111,22 @@
     <audio id="audio" src="sound.mp3"></audio>
 
     <div class="container">
-        <div class="main-image">
+        <div class="image-block">
             <img src="work.jpg" alt="Основная работа">
             <div class="caption">Основная работа</div>
         </div>
-        <div>
-            <div class="gif-large">
-                <img src="at-work-1.gif" alt="Гиф 1">
-                <div class="caption">Рабочий момент 1</div>
+        <div class="image-block">
+            <img src="at-work-1.gif" alt="Гиф 1">
+            <div class="caption">Рабочий момент 1</div>
+        </div>
+        <div class="gif-stack">
+            <div class="image-block">
+                <img src="at-work-2.gif" alt="Гиф 2">
+                <div class="caption">Рабочий момент 2</div>
             </div>
-            <div class="gif-stack">
-                <div>
-                    <img src="at-work-2.gif" alt="Гиф 2">
-                    <div class="caption">Рабочий момент 2</div>
-                </div>
-                <div>
-                    <img src="at-work-3.gif" alt="Гиф 3">
-                    <div class="caption">Рабочий момент 3</div>
-                </div>
+            <div class="image-block">
+                <img src="at-work-3.gif" alt="Гиф 3">
+                <div class="caption">Рабочий момент 3</div>
             </div>
         </div>
     </div>
