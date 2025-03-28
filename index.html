@@ -24,12 +24,12 @@
             width: 80%;
             max-width: 1200px;
         }
-        .main-image, .gif-large, .gif-row {
+        .main-image, .gif-large, .gif-stack {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
-        .main-image img, .gif-large img, .gif-row img {
+        .main-image img, .gif-large img, .gif-stack img {
             width: 100%;
             height: auto;
         }
@@ -37,7 +37,7 @@
             margin-top: 15px;
             text-align: left;
         }
-        .gif-row {
+        .gif-stack {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 40px;
@@ -69,7 +69,7 @@
 </head>
 <body>
 
-    <div class="player-button" onclick="document.getElementById('audio').play()"></div>
+    <div class="player-button" onclick="toggleAudio()"></div>
     <audio id="audio" src="sound.mp3"></audio>
 
     <div class="container">
@@ -77,21 +77,35 @@
             <img src="work.jpg" alt="Основная работа">
             <div class="caption">Основная работа</div>
         </div>
-        <div class="gif-large">
-            <img src="at-work-1.gif" alt="Гиф 1">
-            <div class="caption">Рабочий момент 1</div>
-        </div>
-        <div class="gif-row">
-            <div>
-                <img src="at-work-2.gif" alt="Гиф 2">
-                <div class="caption">Рабочий момент 2</div>
+        <div>
+            <div class="gif-large">
+                <img src="at-work-1.gif" alt="Гиф 1">
+                <div class="caption">Рабочий момент 1</div>
             </div>
-            <div>
-                <img src="at-work-3.gif" alt="Гиф 3">
-                <div class="caption">Рабочий момент 3</div>
+            <div class="gif-stack">
+                <div>
+                    <img src="at-work-2.gif" alt="Гиф 2">
+                    <div class="caption">Рабочий момент 2</div>
+                </div>
+                <div>
+                    <img src="at-work-3.gif" alt="Гиф 3">
+                    <div class="caption">Рабочий момент 3</div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        }
+    </script>
 
 </body>
 </html>
