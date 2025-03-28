@@ -75,18 +75,23 @@
             margin: 5px 0;
             color: #555;
         }
+        .gif-large img {
+            width: 100%;
+            height: auto;
+        }
         .gif-stack {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
+            width: 60%;
+            margin: 0 auto;
         }
-        .gif-large, .gif-stack div {
-            width: 100%;
-        }
-        .caption {
-            margin-top: 5px;
+        .gif-stack div {
+            width: 80%;
         }
         .gif-stack img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
         }
         .player-button {
@@ -121,8 +126,10 @@
                 align-items: center;
             }
             .gif-stack {
-                flex-direction: column;
-                gap: 20px;
+                width: 100%;
+            }
+            .gif-stack div {
+                width: 100%;
             }
             .caption {
                 padding: 8px;
@@ -146,7 +153,7 @@
             <div class="caption" style="white-space: pre-wrap; word-wrap: break-word;">Комната 234 — тихое пространство, где время останавливается. Сумеречный свет мягко касается мебели, создавая игру теней на стенах. В этой комнате каждый предмет хранит свою историю, а стены, наполненные молчанием, становятся свидетелями невидимых мыслей и воспоминаний.</div>
             <div class="technical-info">
                 <h3>Нью Мексико</h3>
-                <p><strong>Авто:</strong>Сюзанна Роттенберг</p>
+                <p><strong>Авто:</strong> Сюзанна Роттенберг</p>
                 <p><strong>Год:</strong> 2004</p>
                 <p><strong>Материал:</strong> Масло на холсте</p>
                 <p><strong>Происхождение:</strong> Частная коллекция</p>
