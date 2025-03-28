@@ -65,7 +65,7 @@
         .gif-stack div {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start; /* Выравнивание по левому краю */
         }
         .gif-stack img {
             width: 100%;
@@ -85,8 +85,8 @@
             cursor: pointer;
         }
         .player-button::before {
-            content: "▶";
-            color: black;
+            content: "+";
+            color: pink;
             font-size: 24px;
             font-weight: bold;
         }
