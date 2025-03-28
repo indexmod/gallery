@@ -3,63 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Минималистичная страница</title>
+    <title>W 011</title>
     <style>
         body {
             font-family: Verdana, sans-serif;
-            font-size: 20px;
+            font-size: 10px;
             color: black;
             background: white;
             margin: 0;
-            padding: 60px;
+            padding: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
         }
         .container {
-            display: flex;
-            align-items: flex-start;
-            gap: 100px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 80px;
+            width: 80%;
+            max-width: 1200px;
         }
-        .main-image {
+        .main-image, .gif-large, .gif-row {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .main-image img {
-            max-width: 100%;
+        .main-image img, .gif-large img, .gif-row img {
+            width: 100%;
             height: auto;
         }
         .caption {
-            margin-top: 10px;
-        }
-        .gif-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 50px;
-        }
-        .gif-container img {
-            height: auto;
-        }
-        .gif-large {
-            width: 180%;
-        }
-        .gif-small {
-            width: 45%;
+            margin-top: 15px;
+            text-align: center;
         }
         .gif-row {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+            width: 100%;
         }
         .player-button {
             position: fixed;
-            top: 10px;
-            right: 10px;
-            width: 40px;
-            height: 40px;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
             background: black;
             border-radius: 50%;
             display: flex;
@@ -70,7 +59,7 @@
         .player-button::before {
             content: "♪";
             color: white;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
         }
         audio {
@@ -85,17 +74,22 @@
 
     <div class="container">
         <div class="main-image">
-            <img src="work.jpg" alt="Основное изображение">
+            <img src="work.jpg" alt="Основная работа">
             <div class="caption">Основная работа</div>
         </div>
-        <div class="gif-container">
-            <img src="at-work-1.gif" alt="Гиф 1" class="gif-large">
+        <div class="gif-large">
+            <img src="at-work-1.gif" alt="Гиф 1">
             <div class="caption">Рабочий момент 1</div>
-            <div class="gif-row">
-                <img src="at-work-2.gif" alt="Гиф 2" class="gif-small">
-                <img src="at-work-3.gif" alt="Гиф 3" class="gif-small">
+        </div>
+        <div class="gif-row">
+            <div>
+                <img src="at-work-2.gif" alt="Гиф 2">
+                <div class="caption">Рабочий момент 2</div>
             </div>
-            <div class="caption">Рабочий момент 2 | Рабочий момент 3</div>
+            <div>
+                <img src="at-work-3.gif" alt="Гиф 3">
+                <div class="caption">Рабочий момент 3</div>
+            </div>
         </div>
     </div>
 
