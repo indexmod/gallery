@@ -81,14 +81,11 @@
         }
         .gif-stack {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
             gap: 20px;
-            width: 60%;
-            margin: 0 auto;
         }
         .gif-stack div {
-            width: 80%;
+            width: calc(50% - 10px);
         }
         .gif-stack img {
             width: 100%;
@@ -126,7 +123,8 @@
                 align-items: center;
             }
             .gif-stack {
-                width: 100%;
+                flex-direction: column;
+                gap: 20px;
             }
             .gif-stack div {
                 width: 100%;
