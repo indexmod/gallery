@@ -10,14 +10,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Facebook Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Комната 234" />
     <meta property="og:description" content="Комната 234 — тихое пространство, где время останавливается. Сумеречный свет мягко касается мебели, создавая игру теней на стенах. В этой комнате каждый предмет хранит свою историю, а стены, наполненные молчанием, становятся свидетелями невидимых мыслей и воспоминаний." />
     <meta property="og:image" content="/favicon-96x96.png" />
     <meta property="og:url" content="https://gallery.indexmod.xyz" />
 
-    <!-- Telegram Meta Tags -->
     <meta name="telegram:channel" content="@your_channel" />
     <meta name="theme-color" content="#ffffff" />
 
@@ -78,10 +76,18 @@
             color: #555;
         }
         .gif-stack {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 40px;
+            display: flex;
+            gap: 20px;
+        }
+        .gif-large, .gif-stack div {
             width: 100%;
+        }
+        .caption {
+            margin-top: 5px;
+        }
+        .gif-stack img {
+            max-width: 100%;
+            height: auto;
         }
         .player-button {
             position: fixed;
@@ -115,10 +121,8 @@
                 align-items: center;
             }
             .gif-stack {
-                display: flex;
                 flex-direction: column;
-                align-items: center;
-                gap: 40px;
+                gap: 20px;
             }
             .caption {
                 padding: 8px;
@@ -139,12 +143,13 @@
     <div class="container">
         <div class="main-image">
             <img src="work.jpg" alt="Основная работа">
-            <div class="caption" style="white-space: pre-wrap; word-wrap: break-word;">Комната 234 — тихое пространство, где время останавливается. Сумеречный свет мягко касается мебели, создавая игру теней на стенах. В этой комнате каждый предмет хранит свою историю, а стены, наполненные молчанием, становятся свидетелями невидимых мыслей и воспоминаний.</div>
-
+            <div class="caption" style="white-space: pre-wrap; word-wrap: break-word;">
+                Комната 234 — тихое пространство, где время останавливается. Сумеречный свет мягко касается мебели, создавая игру теней на стенах. В этой комнате каждый предмет хранит свою историю, а стены, наполненные молчанием, становятся свидетелями невидимых мыслей и воспоминаний.
+            </div>
             <div class="technical-info">
-                <h3>Нью Мексико</h3>
-                <p><strong>Автор:</strong> Сузанна Роттенберг</p>
-                <p><strong>Год:</strong> 2004</p>
+                <h3>*</h3>
+                <p><strong>Авто:</strong> Автор картины неизвестен</p>
+                <p><strong>Год:</strong> 2024</p>
                 <p><strong>Материал:</strong> Масло на холсте</p>
                 <p><strong>Происхождение:</strong> Частная коллекция</p>
             </div>
@@ -153,16 +158,16 @@
         <div>
             <div class="gif-large">
                 <img src="at-work-1.gif" alt="Гиф 1">
-                <div class="caption">Сузанна за работой над "Комнатой 234"</div>
+                <div class="caption">Рабочий момент 1</div>
             </div>
             <div class="gif-stack">
                 <div>
                     <img src="at-work-2.gif" alt="Гиф 2">
-                    <div class="caption">Деали "Комнаты 234"</div>
+                    <div class="caption">Рабочий момент 2</div>
                 </div>
                 <div>
                     <img src="at-work-3.gif" alt="Гиф 3">
-                    <div class="caption">Крупные мазки масляной краски</div>
+                    <div class="caption">Рабочий момент 3</div>
                 </div>
             </div>
         </div>
