@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Минималистичная страница</title>
+    <title>Work 001</title>
     <style>
         body {
             font-family: Verdana, sans-serif;
@@ -11,44 +11,41 @@
             color: black;
             background: white;
             margin: 0;
-            padding: 0;
+            padding: 40px;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
         }
         .container {
             display: flex;
+            align-items: flex-start;
+            gap: 50px;
+        }
+        .main-image {
+            display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
         }
-        .images {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .images img, .images video {
+        .main-image img {
             max-width: 100%;
             height: auto;
         }
-        .main-image {
-            max-width: 50%;
+        .caption {
+            margin-top: 5px;
         }
         .gif-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
         }
-        .gif-container video:first-child {
+        .gif-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .gif-container img:first-child {
             width: 150%;
-        }
-        .captions {
-            margin-top: 10px;
         }
         .player-button {
             position: fixed;
@@ -80,23 +77,18 @@
     <audio id="audio" src="sound.mp3"></audio>
 
     <div class="container">
-        <img src="work.jpg" alt="Основное изображение" class="main-image">
-        <div class="images">
-            <div class="gif-container">
-                <video autoplay loop muted>
-                    <source src="at-work-1.gif" type="video/mp4">
-                </video>
-                <div>
-                    <video autoplay loop muted>
-                        <source src="at-work-2.gif" type="video/mp4">
-                    </video>
-                    <video autoplay loop muted>
-                        <source src="at-work-3.gif" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+        <div class="main-image">
+            <img src="work.jpg" alt="Основное изображение">
+            <div class="caption">Основная работа</div>
         </div>
-        <div class="captions">Подпись 1 | Подпись 2 | Подпись 3 | Подпись 4</div>
+        <div class="gif-container">
+            <img src="at-work-1.gif" alt="Гиф 1">
+            <div class="caption">Рабочий момент 1</div>
+            <img src="at-work-2.gif" alt="Гиф 2">
+            <div class="caption">Рабочий момент 2</div>
+            <img src="at-work-3.gif" alt="Гиф 3">
+            <div class="caption">Рабочий момент 3</div>
+        </div>
     </div>
 
 </body>
