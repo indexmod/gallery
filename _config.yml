@@ -10,4 +10,4 @@ github_username:  indexmod
 sass:
   style: compressed
 
-exclude:
+exclude: []
