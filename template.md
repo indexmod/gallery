@@ -16,6 +16,7 @@ gif_3: "at-work-3.gif"
 caption_1: "Сюзанна работает над 'Комнатой 234'"
 caption_2: "Рабочий момент над деталями 'Комнаты 234'"
 caption_3: "Крупные мазки маслом"
+permalink: template
 ---
 
 # {{ page.title }}
