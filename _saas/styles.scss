@@ -1,0 +1,15 @@
+$main-color: black;
+$bg-color: white;
+
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    color: $main-color;
+    background: $bg-color;
+    margin: 0;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
