@@ -2,17 +2,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
 
-    <script>
-        function toggleAudio() {
-            var audio = document.getElementById('audio');
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-                audio.currentTime = 0;
-            }
+<div class="technical-info">
+    <h3>Нью Мексико</h3>
+    <p><strong>Автор:</strong> {{ page.author }}</p>
+    <p><strong>Год:</strong> {{ page.year }}</p>
+    <p><strong>Материал:</strong> {{ page.material }}</p>
+    <p><strong>Происхождение:</strong> {{ page.origin }}</p>
+</div>
+
+<div class="gif-large">
+    <img src="{{ page.gif_1 }}" alt="Гиф 1">
+    <div class="caption">{{ page.caption_1 }}</div>
+</div>
+
+<div class="gif-stack">
+    <div>
+        <img src="{{ page.gif_2 }}" alt="Гиф 2">
+        <div class="caption">{{ page.caption_2 }}</div>
+    </div>
+    <div>
+        <img src="{{ page.gif_3 }}" alt="Гиф 3">
+        <div class="caption">{{ page.caption_3 }}</div>
+    </div>
+</div>
+
+<button class="player-button" onclick="toggleAudio()"></button>
+<audio id="audio" src="{{ page.audio_file }}"></audio>
+
+<script>
+    function toggleAudio() {
+        var audio = document.getElementById('audio');
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+            audio.currentTime = 0;
         }
-    </script>
+    }
+</script>

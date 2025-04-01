@@ -1,0 +1,68 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    color: black;
+    background: white;
+    margin: 0;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 80px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.main-image, .gif-large, .gif-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-image img, .gif-large img, .gif-stack img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.gif-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    width: 100%;
+}
+
+.player-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.player-button::before {
+    content: "♪";
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+audio {
+    display: none;
+}

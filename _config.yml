@@ -7,7 +7,4 @@ url: "gallery.indexmod.xyz" # the base hostname & protocol for your site, e.g. h
 twitter_username: indexmod
 github_username:  indexmod
 
-sass:
-  style: compressed
-
 exclude: []
